@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zhy.sample.demo_recyclerview.MainActivity" >
+
+    <item
+        android:id="@+id/id_action_add"
+        android:orderInCategory="100"
+        android:title="添加"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/id_action_delete"
+        android:orderInCategory="100"
+        android:title="删除"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/id_action_listview"
+        android:orderInCategory="100"
+        android:title="ListView"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/id_action_horizontalListView"
+        android:orderInCategory="100"
+        android:title="HorizontalListView"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/id_action_gridview"
+        android:orderInCategory="100"
+         android:title="GirdView"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/id_action_horizontalGridView"
+        android:orderInCategory="100"
+         android:title="HorizontalGridView"
+        app:showAsAction="never"/>
+    
+      <item
+        android:id="@+id/id_action_staggeredgridview"
+        android:orderInCategory="100"
+         android:title="StaggeredGridView"
+        app:showAsAction="never"/>
+
+</menu>
