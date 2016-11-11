@@ -6,4 +6,5 @@
 
  先看效果图
  
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/effect.gif)
  
