@@ -55,7 +55,7 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
 </shape>
 ```
 
-  *  在style.xml中设置android:listDivider
+   *   在style.xml中设置android:listDivider
 
 ```xml
         <item name="android:listDivider">@drawable/divider</item>
