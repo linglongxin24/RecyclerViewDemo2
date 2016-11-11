@@ -43,7 +43,7 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
  
  我们用到了网上流传的万能分割线DividerItemDecoration和DividerGridItemDecoration，首先在style.xml里面定义分割线图片：
  
-1.先在drawable中新建divider.xml  
+	1.先在drawable中新建divider.xml  
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,7 +53,9 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
         android:width="1dp"/>
 </shape>
 ```
-2.然后在style.xml中设置android:listDivider
+
+	2.然后在style.xml中设置android:listDivider
+
 
 ```xml
         <item name="android:listDivider">@drawable/divider</item>
