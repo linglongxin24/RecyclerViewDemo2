@@ -6,7 +6,7 @@
 
  先看总体效果图
  
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/effect.gif)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/effect.gif?raw=true)
 
 #一.RecyclerView介绍
 
@@ -15,7 +15,7 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
 
 #二.RecyclerView架构
 
-![架构](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/introduce.png)
+![架构](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/introduce.png?raw=true)
 
 #三.RecyclerView的优点
 
@@ -42,8 +42,9 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
  *  第二步：添加分割线
  
  我们用到了网上流传的万能分割线DividerItemDecoration和DividerGridItemDecoration，首先在style.xml里面定义分割线图片：
-  *  现在drawable中新建divider.xml
-  ```xml
+ 
+1.先在drawable中新建divider.xml  
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
@@ -52,7 +53,7 @@ RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridV
         android:width="1dp"/>
 </shape>
 ```
-  *   在style.xml中设置android:listDivider
+2.然后在style.xml中设置android:listDivider
 
 ```xml
         <item name="android:listDivider">@drawable/divider</item>
@@ -198,7 +199,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
     rv.addItemDecoration(itemDecoration);
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/listview.png)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/listview.png?raw=true)
 
  * 2.横向的ListView
 
@@ -211,7 +212,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
    rv.addItemDecoration(itemDecoration);
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/horizontalListView.png)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/horizontalListView.png?raw=true)
  
  
  * 3.竖向的GridView
@@ -226,7 +227,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
    rv.addItemDecoration(itemDecoration);
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/gridview.png)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/gridview.png?raw=true)
   
  * 4.横向的GridView
 
@@ -240,7 +241,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
     rv.addItemDecoration(itemDecoration);
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/horizontalGridView.png)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/horizontalGridView.png?raw=true)
   
  * 5.竖向的瀑布流
 
@@ -252,7 +253,7 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
      rv.setLayoutManager(new StaggeredGridLayoutManager(5, StaggeredGridLayoutManager.VERTICAL));
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/staggeredgridview.png)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/staggeredgridview.png?raw=true)
 
  * 6.添加和删除动画
 
@@ -263,6 +264,6 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
        rvAdapter.notifyItemRemoved(1);
 ```
 
-![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/add_delete_effect.gif)
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/add_delete_effect.gif?raw=true)
 
 #六.[GiHub](https://github.com/linglongxin24/RecyclerViewDemo2)
