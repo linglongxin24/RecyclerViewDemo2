@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 rv.removeItemDecoration(itemDecoration);
                 rv.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
                 rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//                itemDecoration = new DividerItemDecorationCommon(this, LinearLayoutManager.HORIZONTAL, getResources().getColor(R.color.colorAccent),3);
                 itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL_LIST);
                 rv.addItemDecoration(itemDecoration);
                 break;
@@ -113,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 itemDecoration = new DividerGridItemDecoration(this);
                 rv.addItemDecoration(itemDecoration);
                 break;
-            /**横向的瀑布流**/
+            /**竖向的瀑布流**/
             case R.id.id_action_staggeredgridview:
                 rvAdapter.setType(3);
                 rv.setBackgroundColor(getResources().getColor(R.color.colorAccent));

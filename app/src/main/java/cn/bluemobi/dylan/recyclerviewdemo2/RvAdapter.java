@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * RecyclerView的适配器
  * Created by yuandl on 2016-11-01.
  */
 
@@ -96,6 +97,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
         return datas == null ? 0 : datas.size();
     }
 
+    /**
+     * 用于缓存的ViewHolder
+     */
     public class MyViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
         public TextView tv;
@@ -107,6 +111,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
         }
     }
 
+    /**
+     * 设置item监听的接口
+     */
     public interface OnItemClickListener {
         void onItemClickListener(int position, Integer data);
 
