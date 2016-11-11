@@ -254,4 +254,15 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
 
 ![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/staggeredgridview.png)
 
+ * 6.添加和删除动画
+
+```java
+       /**添加一个数据**/
+       rvAdapter.notifyItemInserted(1);
+       /**删除一个数据**/
+       rvAdapter.notifyItemRemoved(1);
+```
+
+![效果图](https://github.com/linglongxin24/RecyclerViewDemo2/blob/master/images/add_delete_effect.gif)
+
 #六.[GiHub](https://github.com/linglongxin24/RecyclerViewDemo2)
