@@ -1,8 +1,3 @@
->转载请注明出处：[<font color=blue>http://blog.csdn.net/linglongxin24/article/details/53126706</font>  ](http://blog.csdn.net/linglongxin24/article/details/53126706) 
->本文出自[<font color=blue>【DylanAndroid的博客】</font>  ](http://blog.csdn.net/linglongxin24 )
-
-
-----------
 #精通RecyclerView：打造ListView、GridView、瀑布流；学会添加分割线、 添加删除动画 、Item点击事件
 
 >在上一篇[Android用RecyclerView练手仿美团分类界面](http://blog.csdn.net/linglongxin24/article/details/52997986)写了RecyclerView的基本用法，
@@ -15,7 +10,8 @@
 
 #一.RecyclerView介绍
 
-RecyclerView 是Android 5.0版本中新出现的东西，用来替代ListView和GridView的。
+RecyclerView 是Android L版本中新添加的一个用来取代ListView和GridView的SDK，它的灵活性与可替代性比ListView更好。
+接下来通过一系列的内容讲解如何使用RecyclerView,彻底抛弃ListView和GridView。
 
 #二.RecyclerView架构
 
@@ -23,11 +19,16 @@ RecyclerView 是Android 5.0版本中新出现的东西，用来替代ListView和
 
 #三.RecyclerView的优点
 
- * 1.RecyclerView内部已经强制使用VIewHolder，优化了对Item中View的复用。
+ * 1.RecyclerView封装了ViewHolder的回收复用，也就是说RecyclerView标准化了ViewHolder，
+ 编写Adapter面向的是ViewHolder而不再是View了，复用的   逻辑被封装了，写起来更加简单。
  
- * 2.提供了一个较为灵活的布局管理类，LayoutManager，用来控制RecyclerView是线性展示还是垂直展示，以及可以设置成瀑布流。并且提供了ItemDecoration这个类，来灵活的让用户来设置分割线。
-
- * 3.用ItemAnimator可以对item进行布局的删减动画效果。
+ * 2.提供了一种插拔式的体验，高度的解耦，异常的灵活，针对一个Item的显示RecyclerView专门抽取出了相应的类，
+ 来控制Item的显示，使其的扩展性非常强。例如：你想控制横向或者纵向滑动列表效果可以通过LinearLayoutManager这个类来进行控制
+ (与GridView效果对应的是GridLayoutManager,与瀑布流对应的还有StaggeredGridLayoutManager等)，
+ 也就是说RecyclerView不再拘泥于ListView的线性展示方式，它也可以实现GridView的效果等多种效果。你想控制Item的分隔线，
+ 可以通过继承RecyclerView的ItemDecoration这个类，然后针对自己的业务需求去抒写代码。
+ 
+ * 3.可以控制Item增删的动画，可以通过ItemAnimator这个类进行控制，当然针对增删的动画，RecyclerView有其自己默认的实现。
  
 #四.RecyclerView实现三部曲
 
@@ -53,7 +54,7 @@ RecyclerView 是Android 5.0版本中新出现的东西，用来替代ListView和
 </shape>
 ```
 
-		2.然后在style.xml中设置android:listDivider
+	2.然后在style.xml中设置android:listDivider
 
 
 ```xml
